@@ -3,8 +3,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'tmhedberg/SimpylFold'
 Plug 'julienr/vim-cellmode'
-Plug 'junegunn/seoul256.vim'
 Plug 'Valloric/YouCompleteMe'
+Plug 'psf/black'
 call plug#end()
 autocmd InsertEnter * set cul
 autocmd InsertLeave * set nocul
@@ -22,13 +22,10 @@ au!
 autocmd VimEnter * silent !echo -ne "\e[2 q"
 augroup END
 
-colo seoul256
-colo seoul256-light
-
 set background=dark
 set showmatch
 
-let g:ycm_server_python_interpreter='/usr/bin/python3.6'
-
+let g:ycm_server_python_interpreter=''
 let g:ycm_autoclose_preview_window_after_insertion = 1
 set belloff=all
+set number
